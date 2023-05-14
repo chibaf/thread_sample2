@@ -3,8 +3,8 @@ import queue  # library for queu operation
 import time
 from thread_one_class import thread_one  # import thread body
 
-i=1
-thread1=thread_one(i) #provide thread
+i=1   # counter
+thread1=thread_one(i) #provide a thread
 q =queue.Queue()  # queue which stores a result of a thread
 th = threading.Thread(target=thread1.thread, args=(i,q),daemon=True)
 # setting of thread
