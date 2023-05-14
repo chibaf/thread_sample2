@@ -9,13 +9,13 @@ q =queue.Queue()  # queue which stores a result of a thread
 th = threading.Thread(target=thread1.thread, args=(i,q),daemon=True)
 # setting of thread
 th.start() # start thread
-while True:
+while True:  # infinite loop
   if th.is_alive()==False:  #when thread ends
     result = q.get()  # take queu values
     print("thread: "+str(i)+" "+str(result))
     i=i+1
     if i>5:  # execute total five thread 
-      break;
+      break;  # exit loop
     thread1=thread_one(i) #proivide the next thread
     th = threading.Thread(target=thread1.thread, args=(i,q),daemon=True)
     # setting the next thread
