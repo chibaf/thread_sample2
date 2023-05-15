@@ -3,9 +3,9 @@ threading samples
 
 # summary
 
-launch a thread, and after end of the thread take a return value from a queu.
+launch a thread, and after end of the thread the main routine takes a result value from a queu.
 
-this operation is repeated sin times.
+this operation is repeated six times.
 
 # usage
 
